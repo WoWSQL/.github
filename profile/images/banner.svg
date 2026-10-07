@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-label="WoWSQL  Open Source Postgres Backend">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#061018"/>
+      <stop offset="45%" stop-color="#0A1F2C"/>
+      <stop offset="100%" stop-color="#062A24"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2DD4BF">
+        <animate attributeName="stop-color" values="#2DD4BF;#38BDF8;#A78BFA;#2DD4BF" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#38BDF8">
+        <animate attributeName="stop-color" values="#38BDF8;#A78BFA;#2DD4BF;#38BDF8" dur="8s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    <linearGradient id="glow" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#2DD4BF" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#2DD4BF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="18" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <clipPath id="frame">
+      <rect width="1200" height="360" rx="28"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="360" fill="url(#bg)"/>
+
+    <!-- soft ambient blobs -->
+    <circle cx="180" cy="80" r="140" fill="url(#glow)">
+      <animate attributeName="cx" values="180;260;180" dur="10s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="980" cy="280" r="160" fill="#38BDF8" opacity="0.12">
+      <animate attributeName="cy" values="280;220;280" dur="12s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="720" cy="40" r="110" fill="#A78BFA" opacity="0.1">
+      <animate attributeName="r" values="110;140;110" dur="9s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- grid dots -->
+    <g opacity="0.18" fill="#94A3B8">
+      <circle cx="80" cy="60" r="1.5"/>
+      <circle cx="140" cy="60" r="1.5"/>
+      <circle cx="200" cy="60" r="1.5"/>
+      <circle cx="260" cy="60" r="1.5"/>
+      <circle cx="80" cy="110" r="1.5"/>
+      <circle cx="140" cy="110" r="1.5"/>
+      <circle cx="200" cy="110" r="1.5"/>
+      <circle cx="260" cy="110" r="1.5"/>
+      <circle cx="940" cy="70" r="1.5"/>
+      <circle cx="1000" cy="70" r="1.5"/>
+      <circle cx="1060" cy="70" r="1.5"/>
+      <circle cx="1120" cy="70" r="1.5"/>
+      <circle cx="940" cy="120" r="1.5"/>
+      <circle cx="1000" cy="120" r="1.5"/>
+      <circle cx="1060" cy="120" r="1.5"/>
+      <circle cx="1120" cy="120" r="1.5"/>
+    </g>
+
+    <!-- animated wave -->
+    <path fill="none" stroke="url(#accent)" stroke-width="2.5" opacity="0.85"
+          d="M0,290 C150,250 250,330 400,290 C550,250 650,330 800,290 C950,250 1050,320 1200,280">
+      <animate attributeName="d"
+        values="M0,290 C150,250 250,330 400,290 C550,250 650,330 800,290 C950,250 1050,320 1200,280;
+                M0,300 C150,330 250,250 400,300 C550,340 650,250 800,300 C950,340 1050,260 1200,300;
+                M0,290 C150,250 250,330 400,290 C550,250 650,330 800,290 C950,250 1050,320 1200,280"
+        dur="7s" repeatCount="indefinite"/>
+    </path>
+    <path fill="none" stroke="#2DD4BF" stroke-width="1.2" opacity="0.35"
+          d="M0,310 C180,280 280,340 450,310 C620,280 720,340 880,310 C1040,280 1120,330 1200,305">
+      <animate attributeName="d"
+        values="M0,310 C180,280 280,340 450,310 C620,280 720,340 880,310 C1040,280 1120,330 1200,305;
+                M0,320 C180,350 280,270 450,320 C620,350 720,270 880,320 C1040,350 1120,280 1200,315;
+                M0,310 C180,280 280,340 450,310 C620,280 720,340 880,310 C1040,280 1120,330 1200,305"
+        dur="9s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- brand mark -->
+    <g filter="url(#soft)" transform="translate(80,78)">
+      <rect width="56" height="56" rx="14" fill="url(#accent)"/>
+      <text x="28" y="38" text-anchor="middle" font-family="ui-sans-serif, system-ui, Segoe UI, sans-serif" font-size="28" font-weight="800" fill="#041016">W</text>
+    </g>
+
+    <text x="158" y="118" font-family="ui-sans-serif, system-ui, Segoe UI, sans-serif" font-size="44" font-weight="800" fill="#F8FAFC" letter-spacing="-0.5">WoWSQL</text>
+    <text x="158" y="152" font-family="ui-sans-serif, system-ui, Segoe UI, sans-serif" font-size="18" fill="#94A3B8">Open-source Postgres backend for builders</text>
+
+    <!-- feature pills -->
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#E2E8F0">
+      <g transform="translate(158,190)">
+        <rect width="92" height="30" rx="15" fill="#0F766E" opacity="0.35" stroke="#2DD4BF" stroke-opacity="0.5"/>
+        <text x="46" y="20" text-anchor="middle">Postgres</text>
+        <animateTransform attributeName="transform" type="translate" values="158,190;158,186;158,190" dur="4s" repeatCount="indefinite"/>
+      </g>
+      <g transform="translate(266,190)">
+        <rect width="72" height="30" rx="15" fill="#075985" opacity="0.35" stroke="#38BDF8" stroke-opacity="0.5"/>
+        <text x="36" y="20" text-anchor="middle">Auth</text>
+        <animateTransform attributeName="transform" type="translate" values="266,190;266,184;266,190" dur="4.6s" begin="0.3s" repeatCount="indefinite"/>
+      </g>
+      <g transform="translate(354,190)">
+        <rect width="88" height="30" rx="15" fill="#1E3A5F" opacity="0.45" stroke="#60A5FA" stroke-opacity="0.5"/>
+        <text x="44" y="20" text-anchor="middle">Storage</text>
+        <animateTransform attributeName="transform" type="translate" values="354,190;354,186;354,190" dur="5s" begin="0.6s" repeatCount="indefinite"/>
+      </g>
+      <g transform="translate(458,190)">
+        <rect width="96" height="30" rx="15" fill="#4C1D95" opacity="0.35" stroke="#A78BFA" stroke-opacity="0.5"/>
+        <text x="48" y="20" text-anchor="middle">Realtime</text>
+        <animateTransform attributeName="transform" type="translate" values="458,190;458,184;458,190" dur="4.2s" begin="0.9s" repeatCount="indefinite"/>
+      </g>
+      <g transform="translate(570,190)">
+        <rect width="70" height="30" rx="15" fill="#115E59" opacity="0.4" stroke="#5EEAD4" stroke-opacity="0.5"/>
+        <text x="35" y="20" text-anchor="middle">REST</text>
+        <animateTransform attributeName="transform" type="translate" values="570,190;570,186;570,190" dur="4.8s" begin="1.2s" repeatCount="indefinite"/>
+      </g>
+      <g transform="translate(656,190)">
+        <rect width="68" height="30" rx="15" fill="#164E63" opacity="0.4" stroke="#22D3EE" stroke-opacity="0.5"/>
+        <text x="34" y="20" text-anchor="middle">MCP</text>
+        <animateTransform attributeName="transform" type="translate" values="656,190;656,184;656,190" dur="5.2s" begin="1.5s" repeatCount="indefinite"/>
+      </g>
+    </g>
+
+    <!-- terminal card -->
+    <g transform="translate(820,78)">
+      <rect width="300" height="168" rx="16" fill="#020617" stroke="#1E293B" stroke-width="1.5"/>
+      <circle cx="24" cy="22" r="5" fill="#F87171"/>
+      <circle cx="42" cy="22" r="5" fill="#FBBF24"/>
+      <circle cx="60" cy="22" r="5" fill="#34D399"/>
+      <text x="20" y="58" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#64748B">$ docker compose up -d</text>
+      <text x="20" y="86" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#2DD4BF">
+        <tspan></tspan>
+        <animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.8s" fill="freeze"/>
+      </text>
+      <text x="40" y="86" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#94A3B8">
+        postgres ready
+        <animate attributeName="opacity" values="0;1" dur="0.3s" begin="0.9s" fill="freeze"/>
+      </text>
+      <text x="20" y="112" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#38BDF8">
+        <tspan></tspan>
+        <animate attributeName="opacity" values="0;1" dur="0.4s" begin="1.6s" fill="freeze"/>
+      </text>
+      <text x="40" y="112" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#94A3B8">
+        api gateway :8080
+        <animate attributeName="opacity" values="0;1" dur="0.3s" begin="1.7s" fill="freeze"/>
+      </text>
+      <text x="20" y="138" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#A78BFA">
+        <tspan></tspan>
+        <animate attributeName="opacity" values="0;1" dur="0.4s" begin="2.4s" fill="freeze"/>
+      </text>
+      <text x="40" y="138" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#94A3B8">
+        studio :3000
+        <animate attributeName="opacity" values="0;1" dur="0.3s" begin="2.5s" fill="freeze"/>
+      </text>
+      <text x="20" y="162" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#E2E8F0">
+        _
+        <animate attributeName="opacity" values="1;0;1" dur="1s" begin="3s" repeatCount="indefinite"/>
+      </text>
+    </g>
+  </g>
+</svg>
